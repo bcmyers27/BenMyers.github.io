@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ben Myers Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Ben Myers</h1>
+							<p class="major">Data Analyst skilled in Excel, SQL, R, & Tableau</a>.</p>
+						</div>
+						<div class="image">
+							<img src="images\DSC_0015_1 copy.jpg" alt="" />
+						</div>
+					</section>
+
+
+				<!-- Five -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2><strong>San Diego AirBnB Project</strong></h2>
+							<h3>Data Cleaning In Excel</h3>
+							<p>The dataset contains a lot of information, but a majority was useless for my purposes. I hid the columns that I would not be using for my analysis, to help my workflow. Next, I added filters to the spreadsheet so I could find discrepancies. Some listings were not within San Diego County and were removed. Others had the market listed wrongly or not at all and were corrected. A number of listings did not have zip codes associated with them and were removed. Listings without a nightly price or bedroom count were also removed as they did not fit into the scope of the project. I checked to make sure no listings were duplicated using conditional formatting and sorting.</p>
+							<h3>Data Viz in Tableau</h3>
+							<p>I created this dashboard to explore data on the AirBnB listings in San Diego. You can interact with the viz by clicking on the zip codes listed on the right side of the table. This will highlight the zip code on the map and the chart that shows the average reviews of the locations located within that zip code. It will adjust the chart and table on the top of the dashboard to reflect that zip code's data. Clciking directly on the map or chart at the bottom will have the same effect.</p>
+							<div class="myTableauViz">
+						<div class='tableauPlaceholder' id='viz1702588428277' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SanDiegoAirBnBListings_17025245066640&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SanDiegoAirBnBListings_17025245066640&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SanDiegoAirBnBListings_17025245066640&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1702588428277');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1577px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+						</script>
+						</div>
+					</section>
+
+				<!-- Additional Elements -->
+				<section class="wrapper style1 align-center">
+					<div class="inner">
+						<h2><strong>Data Visualization in R: Penguin Plots</strong></h2>
+						<p>Penguin Plots: Practice Analysis</p>
+						<div class="index align-left">
+
+
+
+
+								<section>
+									<header>
+										<h3>Code</h3>
+									</header>
+									<div class="content">
+
+										<pre><code>
+## Setting up my environment
+Notes: setting up my R environment by loading the `tidyverse` and
+`palmerpenguins` packages:
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+Notes: previewing the dataset by running the head function for `penguins`
+
+```{r}
+head(penguins)
+```
+
+## Plotting the dataset
+
+Notes: looking for the correlation between body mass and flipper length between
+the different species I plotted this graph
+
+```{r}
+ggplot(data=penguins)+
+  geom_smooth(mapping=aes(x=flipper_length_mm,y=body_mass_g))+
+  geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  labs(title="Palmer Penguins: Body Mass vs. Flipper Length",
+       subtitle="Sample of Three Penguin Species",
+       caption="Data collected by Dr.Kristen Gorman")+
+  annotate("text", x=220,y=3500,label="The Gentoos are the largest",
+           fontface="bold",size=4.5,angle=25)
+```
+
+## Conclusion
+
+The scatter plot revealed that there is a correlation between body mass and
+flipper length for the three species
+										  
+										</code></pre>
+
+				
+								
+
+								</section>
+
+								<section class="wrapper style1 align-center">
+									<div class="inner">
+										<div class="image">
+											<img src="images\RSmoothPoint.png" alt="" />
+									</div>
+								</section>
+
+
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-left">
+						<div class="inner">
+							<h3>Get in Touch</h3>
+							<p>Email: <a href="mailto:bcmyers27@gmail.com">bcmyers27@gmail.com</a></p>
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/bcmyers27/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<p>Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
